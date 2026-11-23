@@ -1,0 +1,23 @@
+SISTEMA DE VENTAS - INSTALACION
+================================
+
+1) INSTALAR EL DRIVER SQLITE (una sola vez por computadora)
+   Abra Excel > Archivo > Cuenta > Acerca de Excel y vea si Office es de 32 o de 64 bits.
+   - Office de 64 bits: ejecute  drivers\sqliteodbc_w64.exe
+   - Office de 32 bits: ejecute  drivers\sqliteodbc.exe
+   Si no esta seguro, instale los dos (no se estorban).
+   Acepte todo con Siguiente / Instalar.
+
+2) COPIAR LA CARPETA
+   Copie esta carpeta completa donde quiera (por ejemplo al Escritorio).
+   No separe los archivos: el sistema, tienda.db y la carpeta iconos van juntos.
+
+3) HABILITAR MACROS
+   Si la carpeta vino de internet o de un correo: clic derecho en
+   'SISTEMA PARA TIENDA.xlsm' > Propiedades > marque 'Desbloquear' > Aceptar.
+   Al abrirlo, si Excel lo pide, pulse 'Habilitar contenido'.
+
+4) PRIMERA VEZ
+   Abra 'SISTEMA PARA TIENDA.xlsm'. Escriba el nombre de su tienda y cree
+   su usuario ADMINISTRADOR con su contrasena. Guardela bien: no se puede recuperar.
+   Despues, en CONFIGURACION > USUARIOS, cree a sus cajeros.
