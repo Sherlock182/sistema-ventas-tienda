@@ -37,11 +37,12 @@ La carpeta ya trae todo lo necesario, **incluido el driver de SQLite**:
 
 El sistema se actualiza solo desde este repositorio, **sin perder datos**:
 
-1. Entre a **CONFIGURACIÓN** y presione **ACTUALIZAR**. El sistema solo se conecta a internet cuando usted presiona este botón.
-2. Si hay una versión nueva, se muestran los cambios y se pide confirmar.
-3. El sistema descarga la versión publicada en [Releases](../../releases/latest) y comprueba su **huella SHA-256**. Si el archivo no coincide, no se instala nada.
-4. Antes de cambiar nada guarda un respaldo de `tienda.db` y del sistema actual en la carpeta `respaldos`.
-5. Se cierra, se reemplaza el archivo del sistema y se vuelve a abrir solo.
+1. Al entrar a la caja, el sistema revisa en segundo plano si hay una versión nueva (solo lee el número de versión; no descarga nada).
+2. Si la hay, aparece un **punto rojo en el engrane** y el botón **ACTUALIZAR** de CONFIGURACIÓN se pone verde con la versión nueva.
+3. Al presionarlo se muestran los cambios y se pide confirmar.
+4. El sistema descarga la versión publicada en [Releases](../../releases/latest) y comprueba su **huella SHA-256**. Si el archivo no coincide, no se instala nada.
+5. Antes de cambiar nada guarda un respaldo de `tienda.db` y del sistema actual en la carpeta `respaldos`.
+6. Se cierra, se reemplaza el archivo del sistema y se vuelve a abrir solo.
 
 Sus ventas, productos, clientes, usuarios y los datos del ticket se conservan: la base de datos `tienda.db` nunca se reemplaza. No se puede actualizar con una venta en curso.
 
