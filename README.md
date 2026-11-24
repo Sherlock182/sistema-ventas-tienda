@@ -1,5 +1,7 @@
 # 🛒 Sistema de Ventas para Tienda (POS en Excel + SQLite)
 
+![Versión](https://img.shields.io/github/v/release/Sherlock182/sistema-ventas-tienda?label=versi%C3%B3n)
+
 Sistema de punto de venta para tiendas, abarroterías y minisúper. Funciona en **Microsoft Excel para Windows** y guarda los datos en una base de datos **SQLite**, así que se mantiene rápido aunque tenga miles de ventas.
 
 Se usa como una aplicación normal: al abrir el archivo, Excel queda oculto y aparece la caja. Se puede manejar **todo con el teclado** y con **lector de código de barras**.
@@ -28,6 +30,22 @@ La carpeta ya trae todo lo necesario, **incluido el driver de SQLite**:
 ```
 
 > ⚠️ No separe los archivos: `SISTEMA PARA TIENDA.xlsm`, `tienda.db` y la carpeta `iconos` tienen que estar juntos.
+
+---
+
+## 🔄 Actualizaciones
+
+El sistema se actualiza solo desde este repositorio, **sin perder datos**:
+
+1. Entre a **CONFIGURACIÓN** y presione **ACTUALIZAR**. El sistema solo se conecta a internet cuando usted presiona este botón.
+2. Si hay una versión nueva, se muestran los cambios y se pide confirmar.
+3. El sistema descarga la versión publicada en [Releases](../../releases/latest) y comprueba su **huella SHA-256**. Si el archivo no coincide, no se instala nada.
+4. Antes de cambiar nada guarda un respaldo de `tienda.db` y del sistema actual en la carpeta `respaldos`.
+5. Se cierra, se reemplaza el archivo del sistema y se vuelve a abrir solo.
+
+Sus ventas, productos, clientes, usuarios y los datos del ticket se conservan: la base de datos `tienda.db` nunca se reemplaza. No se puede actualizar con una venta en curso.
+
+> Si usted descargó el sistema antes de la versión **1.0.0**, descárguelo una vez más desde aquí (y copie su `tienda.db` en la carpeta nueva). Desde la 1.0.0 en adelante, las actualizaciones llegan con el botón **ACTUALIZAR**.
 
 ---
 
@@ -158,6 +176,7 @@ Ticket configurable: nombre del negocio, dirección, teléfono, WhatsApp, correo
 - Modo **pantalla completa**.
 - **Respaldo automático** diario de la base de datos (carpeta `respaldos`).
 - **Reiniciar sistema** (solo administrador): deja todo como recién instalado, con opción de conservar los productos.
+- **Actualizar**: busca e instala la última versión publicada en este repositorio, con respaldo previo.
 - **Copia para vender**: crea una carpeta lista para entregar a otro negocio, sin sus ventas ni usuarios.
 - Todo el texto en **MAYÚSCULAS** y números con **punto decimal**.
 - Contraseñas guardadas cifradas (**SHA-256** con sal).
